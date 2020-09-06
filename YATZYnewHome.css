@@ -1,0 +1,152 @@
+@import url("https://fonts.googleapis.com/css2?family=Syne&display=swap");
+
+body {
+  margin: 0cm;
+  font-family: "Syne", sans-serif;
+  text-align: center;
+}
+
+h2 {
+  border-bottom-color: #00afcc;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  padding: 0.5cm;
+}
+
+.block1 {
+  padding: 30px;
+  padding: white;
+  color: black;
+  background-image: url("./img/paint.png");
+  background-color: rgba(225, 225, 225, 0.5);
+  background-blend-mode: lighten;
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 6.3cm;
+  height: auto;
+  box-shadow: 6px 6px rgb(216, 212, 212);
+}
+
+.block2 {
+  padding: 30px;
+  padding: white;
+  color: black;
+  background-image: url("./img/paint.png");
+  background-color: rgba(225, 225, 225, 0.5);
+  background-blend-mode: lighten;
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 6.3cm;
+  height: auto;
+  box-shadow: 6px 6px rgb(216, 212, 212);
+}
+
+.block3 {
+  padding: 30px;
+  padding: white;
+  color: black;
+  background-image: url("./img/paint.png");
+  background-color: rgba(225, 225, 225, 0.5);
+  background-blend-mode: lighten;
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 6.3cm;
+  height: auto;
+  box-shadow: 6px 6px rgb(216, 212, 212);
+}
+
+.list {
+  color: black;
+  border: solid rgb(216, 212, 212) 1px;
+  padding: auto;
+}
+
+.welcom {
+  margin: 0cm;
+  padding: 10px;
+  background-color: rgb(216, 212, 212);
+}
+
+.outerbox {
+  display: flex;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.box1 {
+  margin-right: auto;
+  margin-left: auto;
+  text-align: center;
+}
+
+table {
+  margin-right: auto;
+  margin-left: auto;
+  text-align: center;
+}
+
+.YATZY {
+  color: white;
+  background: #00afcc;
+}
+
+.imgyatzy1 {
+  width: 550px;
+  height: auto;
+}
+
+.box2 {
+  width: 900px;
+  margin-right: auto;
+  margin-left: auto;
+  text-align: left;
+}
+
+.videobox {
+  width: 900px;
+  margin-right: auto;
+  margin-left: auto;
+  text-align: left;
+}
+
+.box3 {
+  width: 900px;
+  margin-right: auto;
+  margin-left: auto;
+  text-align: left;
+}
+
+.box4 {
+  width: 900px;
+  margin-right: auto;
+  margin-left: auto;
+  text-align: left;
+}
+
+.dice1 {
+  width: 50px;
+  height: auto;
+}
+
+.format {
+  width: 270px;
+  height: auto;
+}
+
+.UpperSection {
+  padding: 0.5cm;
+  color: black;
+  border: solid rgb(216, 212, 212) 1px;
+  padding: auto;
+}
+
+.LowerSection {
+  padding: 0.5cm;
+  color: black;
+  border: solid rgb(216, 212, 212) 1px;
+  padding: auto;
+}
+
+.playbutton {
+}
