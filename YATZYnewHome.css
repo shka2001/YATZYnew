@@ -18,7 +18,7 @@ ul {
   padding: 0;
 }
 .hero-wrapper {
-  background: url("img/pc_pug_img.jpg");
+  background: url("img/dice_blue.jpg");
   background-size: cover;
 }
 .wrapper {
@@ -45,9 +45,7 @@ header ul li a {
 .hero-content .subtitle {
   margin-bottom: 0;
 }
-.light-purole-wrapper {
-  background: purple;
-}
+
 .stats {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
@@ -65,9 +63,7 @@ header ul li a {
   text-transform: uppercase;
   font-size: 0.75em;
 }
-.arrows {
-  display: none;
-}
+
 .extended-wrapper {
   padding: 0 1.5em 2em;
   max-width: 1230px;
@@ -87,33 +83,12 @@ blockquote {
   line-height: 1.8em;
   margin-bottom: 1em;
 }
-cite {
-  color: blueviolet;
-  font-weight: bold;
-  font-size: 0.8em;
-  font-style: normal;
-  position: relative;
-  scroll-padding-left: 25px;
-}
-cite::before {
-  content: " ";
-  position: absolute;
-  left: 0;
-  height: 1px;
-  width: 20px;
-  border-bottom: 1px solid white;
-}
+
 h2 {
   text-align: center;
   position: relative;
 }
-h2::before {
-  content: "";
-  height: 5px;
-  width: 30px;
-  background: lightskyblue;
-  top: -0.3em;
-}
+
 .companies {
   text-align: center;
   opacity: 0.4;
@@ -143,12 +118,7 @@ h2::before {
   .companies .carousal-container {
     display: flex;
   }
-  .companies .arrows {
-    display: block;
-    width: 40px;
-    cursor: pointer;
-    margin: 0.5em;
-  }
+
   .companies .right {
     transform: rotateZ(180deg);
   }
