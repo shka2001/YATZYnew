@@ -1,152 +1,209 @@
-@import url("https://fonts.googleapis.com/css2?family=Syne&display=swap");
-
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;800&display=swap");
+* {
+  box-sizing: border-box;
+}
 body {
-  margin: 0cm;
-  font-family: "Syne", sans-serif;
-  text-align: center;
-}
-
-h2 {
-  border-bottom-color: #00afcc;
-  border-bottom-style: solid;
-  border-bottom-width: 2px;
-  padding: 0.5cm;
-}
-
-.block1 {
-  padding: 30px;
-  padding: white;
-  color: black;
-  background-image: url("./img/paint.png");
-  background-color: rgba(225, 225, 225, 0.5);
-  background-blend-mode: lighten;
-  background-size: contain;
-  background-repeat: no-repeat;
-  width: 6.3cm;
-  height: auto;
-  box-shadow: 6px 6px rgb(216, 212, 212);
-}
-
-.block2 {
-  padding: 30px;
-  padding: white;
-  color: black;
-  background-image: url("./img/paint.png");
-  background-color: rgba(225, 225, 225, 0.5);
-  background-blend-mode: lighten;
-  background-size: contain;
-  background-repeat: no-repeat;
-  width: 6.3cm;
-  height: auto;
-  box-shadow: 6px 6px rgb(216, 212, 212);
-}
-
-.block3 {
-  padding: 30px;
-  padding: white;
-  color: black;
-  background-image: url("./img/paint.png");
-  background-color: rgba(225, 225, 225, 0.5);
-  background-blend-mode: lighten;
-  background-size: contain;
-  background-repeat: no-repeat;
-  width: 6.3cm;
-  height: auto;
-  box-shadow: 6px 6px rgb(216, 212, 212);
-}
-
-.list {
-  color: black;
-  border: solid rgb(216, 212, 212) 1px;
-  padding: auto;
-}
-
-.welcom {
-  margin: 0cm;
-  padding: 10px;
-  background-color: rgb(216, 212, 212);
-}
-
-.outerbox {
-  display: flex;
-  width: 100%;
-  display: flex;
-  justify-content: center;
-}
-
-.box1 {
-  margin-right: auto;
-  margin-left: auto;
-  text-align: center;
-}
-
-table {
-  margin-right: auto;
-  margin-left: auto;
-  text-align: center;
-}
-
-.YATZY {
+  margin: 0;
+  background: blue;
   color: white;
-  background: #00afcc;
+  font-family: "Montserrat";
 }
-
-.imgyatzy1 {
-  width: 550px;
-  height: auto;
+a {
+  color: white;
+  text-decoration: none;
 }
-
-.box2 {
-  width: 900px;
-  margin-right: auto;
-  margin-left: auto;
-  text-align: left;
+ul {
+  list-style: 0;
+  margin: 0;
+  padding: 0;
 }
-
-.videobox {
-  width: 900px;
-  margin-right: auto;
-  margin-left: auto;
-  text-align: left;
+.hero-wrapper {
+  background: url("img/pc_pug_img.jpg");
+  background-size: cover;
 }
-
-.box3 {
-  width: 900px;
-  margin-right: auto;
-  margin-left: auto;
-  text-align: left;
+.wrapper {
+  padding: 1.5em;
+  max-width: 1200px;
+  margin: 0 auto;
 }
-
-.box4 {
-  width: 900px;
-  margin-right: auto;
-  margin-left: auto;
-  text-align: left;
+header {
+  display: flex;
+  justify-content: space-between;
 }
-
-.dice1 {
-  width: 50px;
-  height: auto;
+header .logo {
+  font-weight: bold;
 }
-
-.format {
-  width: 270px;
-  height: auto;
+header ul {
+  display: flex;
 }
-
-.UpperSection {
-  padding: 0.5cm;
-  color: black;
-  border: solid rgb(216, 212, 212) 1px;
-  padding: auto;
+header ul li a {
+  padding: 0.6em;
 }
-
-.LowerSection {
-  padding: 0.5cm;
-  color: black;
-  border: solid rgb(216, 212, 212) 1px;
-  padding: auto;
+.hero-content {
+  margin: 4em 0 2em;
 }
-
-.playbutton {
+.hero-content .subtitle {
+  margin-bottom: 0;
+}
+.light-purole-wrapper {
+  background: purple;
+}
+.stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+  justify-content: space-around;
+  margin-top: 2em;
+}
+.stats li {
+  margin-bottom: 1.5em;
+}
+.stats strong {
+  font-size: 1.4em;
+}
+.stats span {
+  display: block;
+  text-transform: uppercase;
+  font-size: 0.75em;
+}
+.arrows {
+  display: none;
+}
+.extended-wrapper {
+  padding: 0 1.5em 2em;
+  max-width: 1230px;
+  margin: 0 auto;
+}
+ul.carousal {
+  margin-bottom: 1em;
+}
+ul.carousal li {
+  background: #422847;
+  padding: 1em;
+  margin-bottom: 1em;
+}
+blockquote {
+  margin: 0;
+  font-size: 0.8em;
+  line-height: 1.8em;
+  margin-bottom: 1em;
+}
+cite {
+  color: blueviolet;
+  font-weight: bold;
+  font-size: 0.8em;
+  font-style: normal;
+  position: relative;
+  scroll-padding-left: 25px;
+}
+cite::before {
+  content: " ";
+  position: absolute;
+  left: 0;
+  height: 1px;
+  width: 20px;
+  border-bottom: 1px solid white;
+}
+h2 {
+  text-align: center;
+  position: relative;
+}
+h2::before {
+  content: "";
+  height: 5px;
+  width: 30px;
+  background: lightskyblue;
+  top: -0.3em;
+}
+.companies {
+  text-align: center;
+  opacity: 0.4;
+}
+.companies li {
+  margin: 2em 0;
+}
+.companies .skillshare {
+  width: 100px;
+}
+.companies .ps {
+  width: 200px;
+}
+@media (min-width: 500px) {
+  .companies .companies {
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+  }
+}
+@media (min-width: 650px) {
+  .companies body {
+    font-size: 18px;
+  }
+  .companies .wrapper {
+    padding: 1.5em 4em;
+  }
+  .companies .carousal-container {
+    display: flex;
+  }
+  .companies .arrows {
+    display: block;
+    width: 40px;
+    cursor: pointer;
+    margin: 0.5em;
+  }
+  .companies .right {
+    transform: rotateZ(180deg);
+  }
+  .companies ul.carousal {
+    display: flex;
+    margin-bottom: 0;
+  }
+  .companies ul.carousal li {
+    margin-right: 1em;
+    margin-bottom: 0;
+    padding: 2em;
+  }
+  .companies ul.carousal li:last-cild {
+    margin-right: 0;
+  }
+  .companies .companies {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+@media (min-width: 853px) {
+  .companies body {
+    font-size: 20px;
+  }
+  .companies .stats {
+    display: flex;
+    justify-content: space-between;
+    margin: 0;
+  }
+  .companies .companies {
+    grid-template-columns: repeat(4, auto);
+  }
+  .companies h1 {
+    font-size: 2.5em;
+  }
+  .companies .subtitle {
+    text-align: left;
+    font-size: 2em;
+  }
+  .companies .v-padding {
+    padding: 4em;
+  }
+  .companies .light-purole-wrapper {
+    padding: 4em;
+  }
+  .companies .move-up {
+    margin-top: -7em;
+  }
+}
+@media (min-width: 853px) {
+  .companies {
+    border-right: 1px solid rgb;
+    padding-right: 5%;
+  }
+  .companies:last-child {
+    border: 0;
+  }
 }
