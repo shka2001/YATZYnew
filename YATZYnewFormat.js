@@ -24,12 +24,12 @@ document.addEventListener("DOMContentLoaded", function (event) {
     if (player1Sum > 63) {
       let player1bonus = 30;
       console.log(player1bonus);
+      //HTMLから一つ要素を取ってきてHTML内の空欄部分に表示する。
       document.querySelector("#player1Bonus").innerHTML = player1bonus;
       document.querySelector("#player1Sum").innerHTML =
         player1Sum + player1bonus;
     } else {
       let player1bonus = 0;
-
       document.querySelector("#player1Bonus").innerHTML = player1bonus;
       document.querySelector("#player1Sum").innerHTML =
         player1Sum + player1bonus;
