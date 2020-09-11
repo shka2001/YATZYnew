@@ -10,7 +10,6 @@ document.addEventListener("DOMContentLoaded", function (event) {
     }
 
     if (sum > 63) {
-      sum += 50;
       document.querySelector("#player1Bonus").innerHTML = 50;
     }
     document.querySelector("#player1Sum").innerHTML = sum;
@@ -22,6 +21,8 @@ document.addEventListener("DOMContentLoaded", function (event) {
       loopinput();
     });
   }
+
+  //短い方法で下のコードをまとめて上に書いた。
   /*var OnesPlayer1 = document.getElementById("OnesPlayer1");
   OnesPlayer1.addEventListener("change", function (event) {
     loopinput();
@@ -50,6 +51,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
   function calcDownBox() {
     let total = 0;
     let upSum = parseInt(document.getElementById("player1Sum").innerHTML);
+    let bonus = parseInt(document.getElementById("player1Bonus").innerHTML);
 
     var downPlayer1Inputs = document.getElementsByClassName("downPlayer1");
     for (let downInput of downPlayer1Inputs) {
@@ -57,6 +59,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
     }
 
     total += upSum;
+    total += bonus;
     console.log(total);
     document.querySelector("#player1Total").innerHTML = total;
   }
