@@ -13,7 +13,49 @@
   <body>
     <h1>YATZY</h1>
 
-    <table border="1">
+    <table class="diceBox">
+
+      <tr>
+        <td class="diceboxinner">
+          <img id="dice1" calss="dices" src="img/dice1.png" />
+        </td>
+        <td>
+          <img id="dice2" calss="dices" src="img/dice1.png" />
+        </td>
+        <td>
+          <img id="dice3" calss="dices" src="img/dice1.png" />
+        </td>
+        <td>
+          <img id="dice1" calss="dices" src="img/dice1.png" />
+        </td>
+        <td>
+          <img id="dice1" calss="dices" src="img/dice1.png" />
+        </td>
+      </tr>
+      
+      <tr>
+        <td>
+          <input type="checkbox" name="dice1" /></label>
+        </td>
+        <td>
+          <input type="checkbox" name="dice2" /></label>
+        </td>
+        <td>
+          <input type="checkbox" name="dice3" /></label>
+        </td>
+        <td>
+          <input type="checkbox" name="dice4" /></label>
+        </td>
+        <td>
+          <input type="checkbox" name="dice5" /></label>
+        </td>
+      </tr>
+
+  </table>
+  <p class="rollDiceLeft"></p>
+  <p><button id="roll">Roll the dice/Slå tårningar</button></p>
+
+    <table clzss="calcFormat" border="1">
       <thead>
         <th class="DarkGray">Spelare/Player</th>
         <th><input type="text" id="Player1" class="Player1"/></th>
