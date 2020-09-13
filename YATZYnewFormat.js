@@ -70,4 +70,15 @@ document.addEventListener("DOMContentLoaded", function (event) {
       calcDownBox();
     });
   }
+  let checkboxDice1 = document.getElementById("checkboxdice1");
+  checkboxDice1.addEventListener("click", function (event) {
+    let imgDice1 = document.getElementById("dice1");
+
+    if (checkboxDice1.checked) {
+      //opacityの機能は、、0は透明。１は透明じゃない。id+style+cssの機能コードを書く。
+      imgDice1.style.opacity = 0.3;
+    } else {
+      imgDice1.style.opacity = 1.0;
+    }
+  });
 });
