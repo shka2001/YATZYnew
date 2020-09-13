@@ -73,15 +73,20 @@ document.addEventListener("DOMContentLoaded", function (event) {
   }
 
   //サイコロの色をチェックボックスクリックで透明に変える。
-  let checkboxDice1 = document.getElementById("checkboxdice1");
-  checkboxDice1.addEventListener("click", function (event) {
-    let imgDice1 = document.getElementById("dice1");
+  let checkboxDicesArr = document.getElementsByClassName("classcheckboxdice");
+  let imgDicesArr = document.getElementsByClassName("dices");
 
-    if (checkboxDice1.checked) {
+  for (let index = 0; index < checkboxDicesArr.length; index++) {
+    let checkboxDice = checkboxDicesArr[index];
+    let imgDice = imgDicesArr[index];
+
+    checkboxDice.addEventListener("click", function (event) {
       //opacityの機能は、、0は透明。１は透明じゃない。id+style+cssの機能コードを書く。
-      imgDice1.style.opacity = 0.3;
-    } else {
-      imgDice1.style.opacity = 1.0;
-    }
-  });
+      if (checkboxDice.checked) {
+        imgDice.style.opacity = 0.3;
+      } else {
+        imgDice.style.opacity = 1.0;
+      }
+    });
+  }
 });
