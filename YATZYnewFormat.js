@@ -89,4 +89,13 @@ document.addEventListener("DOMContentLoaded", function (event) {
       }
     });
   }
+
+  let rollDice = document.getElementById("rollButton");
+  rollDice.addEventListener("click", function (event) {
+    for (diceIdNumber = 1; diceIdNumber <= 5; diceIdNumber++) {
+      let diceNumber = Math.floor(Math.random() * 6 + 1);
+      let imgDiceRoll = document.getElementById("dice" + diceIdNumber);
+      imgDiceRoll.src = "img/dice" + diceNumber + ".png";
+    }
+  });
 });
