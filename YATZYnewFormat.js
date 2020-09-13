@@ -72,7 +72,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
     });
   }
 
-  //サイコロの色をチェックボックスクリックで透明に変える。
+  //サイコロの色をチェックボックスクリックで透明に一つずつ変える。
   let checkboxDicesArr = document.getElementsByClassName("classcheckboxdice");
   let imgDicesArr = document.getElementsByClassName("dices");
 
@@ -89,13 +89,44 @@ document.addEventListener("DOMContentLoaded", function (event) {
       }
     });
   }
-
+  //ボタンを押すとサイコロを振る。
   let rollDice = document.getElementById("rollButton");
+
   rollDice.addEventListener("click", function (event) {
-    for (diceIdNumber = 1; diceIdNumber <= 5; diceIdNumber++) {
-      let diceNumber = Math.floor(Math.random() * 6 + 1);
-      let imgDiceRoll = document.getElementById("dice" + diceIdNumber);
-      imgDiceRoll.src = "img/dice" + diceNumber + ".png";
+    let checkboxDicechoiceArr = document.getElementsByClassName(
+      "classcheckboxdice"
+    );
+    //サイコロを振れる残りの回数の計算とその表示。
+    //サイコロを振れる残りの回数をHTMLから3を得る。
+    let diceThrowsLeft = document.getElementById("rollDiceLeft").innerHTML;
+    //取ってきた回数を数字にする。
+    let diceThrowsLeftNumber = parseInt(diceThrowsLeft);
+    //残りの回数が0になったら、ボタンの最初のクリックイベントに戻る。
+    if (diceThrowsLeftNumber == 0) {
+      return;
     }
+    //得た数字から残りのサイコロを振れる回数を引いていく。
+    diceThrowsLeftNumber--;
+    //引いた残りの振れる回数を数字をHTMLに表示する。
+    document.getElementById("rollDiceLeft").innerHTML = diceThrowsLeftNumber;
+
+    for (
+      let checkboxDicechoice = 0;
+      checkboxDicechoice < checkboxDicechoiceArr.length;
+      checkboxDicechoice++
+    ) {
+      if (checkboxDicechoiceArr[checkboxDicechoice].checked) {
+        let diceCheckboxDicechoice = Math.floor(Math.random() * 6 + 1);
+        let imgDiceRollChoice = document.getElementById(
+          "dice" + (checkboxDicechoice + 1)
+        );
+        imgDiceRollChoice.src = "img/dice" + diceCheckboxDicechoice + ".png";
+      }
+    }
+    // for (diceIdNumber = 1; diceIdNumber <= 5; diceIdNumber++) {
+    //   let diceNumber = Math.floor(Math.random() * 6 + 1);
+    //   let imgDiceRoll = document.getElementById("dice" + diceIdNumber);
+    //   imgDiceRoll.src = "img/dice" + diceNumber + ".png";
+    // }
   });
 });
