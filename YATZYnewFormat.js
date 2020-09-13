@@ -1,7 +1,7 @@
 // JavaScriptがHTMLに尋ねる。
 document.addEventListener("DOMContentLoaded", function (event) {
   //入力された数字を取る。
-
+  //上のフォーマットの部分を計算し、合計を出し、合計が63以上なボーナスを表示する。
   function loopinput() {
     let sum = 0;
     var upPlayer1Inputs = document.getElementsByClassName("upPlayer1");
@@ -48,6 +48,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
     loopinput();
   });'´*/
 
+  //下のフォーマットの部分を計算し、表全体の合計を出す。
   function calcDownBox() {
     let total = 0;
     let upSum = parseInt(document.getElementById("player1Sum").innerHTML);
@@ -70,6 +71,8 @@ document.addEventListener("DOMContentLoaded", function (event) {
       calcDownBox();
     });
   }
+
+  //サイコロの色をチェックボックスクリックで透明に変える。
   let checkboxDice1 = document.getElementById("checkboxdice1");
   checkboxDice1.addEventListener("click", function (event) {
     let imgDice1 = document.getElementById("dice1");
