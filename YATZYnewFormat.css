@@ -6,7 +6,8 @@ body {
 
 h1 {
   margin: 0 auto;
-  padding: 2cm;
+  padding-top: 30px;
+  margin-bottom: 10px;
   text-align: center;
 }
 
@@ -30,7 +31,6 @@ table.calcFormat {
 
 input {
   max-width: 50px;
-  background-color: transparent;
 }
 
 td img {
@@ -45,4 +45,24 @@ table.diceBox {
 }
 td.diceboxinner {
   border: none;
+}
+
+#chattrum {
+  border: 1px solid black;
+}
+
+ul {
+  border: 1px solid gray;
+  padding: 10px;
+  list-style: none;
+}
+
+li {
+  border: 1px solid gray;
+  background-color: whit;
+  padding: 5px;
+}
+
+.removed {
+  text-decoration: line-through;
 }

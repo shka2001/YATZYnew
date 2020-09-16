@@ -129,4 +129,28 @@ document.addEventListener("DOMContentLoaded", function (event) {
     //   imgDiceRoll.src = "img/dice" + diceNumber + ".png";
     // }
   });
+
+  //ul内に入力された情報のリスト内からクリックで削除する。
+  let list = document.getElementById("ul_list");
+  list.addEventListener("click", function (event) {
+    //event.target.remove();
+    event.target.classList.add("removed");
+  });
+
+  //ボタンの情報を取ってくる。
+  let btnSend = document.getElementById("btnSend");
+  //ボタンを押したらイベント。
+  btnSend.addEventListener("click", function (event) {
+    //インプットから入力された情報を取ってくる。
+    let message = document.getElementById("chatboxMessage");
+
+    //行を作る。そこへ入力された情報を表示。
+    let new_message = document.createElement("li");
+    new_message.innerHTML =
+      '<input type="checkbox" />' +
+      message.value +
+      '<input type="button" value="remove" />';
+
+    list.appendChild(new_message);
+  });
 });
