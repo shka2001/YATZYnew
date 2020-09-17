@@ -1,5 +1,10 @@
 // JavaScriptがHTMLに尋ねる。
 document.addEventListener("DOMContentLoaded", function (event) {
+  let checkboxoOpacity = document.getElementsByClassName("classcheckboxdice");
+  for (const box of checkboxoOpacity) {
+    box.style.opacity = 0.0;
+  }
+
   //入力された数字を取る。
   //上のフォーマットの部分を計算し、合計を出し、合計が63以上なボーナスを表示する。
   function loopinput() {
@@ -83,9 +88,9 @@ document.addEventListener("DOMContentLoaded", function (event) {
     checkboxDice.addEventListener("click", function (event) {
       //opacityの機能は、、0は透明。１は透明じゃない。id+style+cssの機能コードを書く。
       if (checkboxDice.checked) {
-        imgDice.style.opacity = 0.3;
-      } else {
         imgDice.style.opacity = 1.0;
+      } else {
+        imgDice.style.opacity = 0.3;
       }
     });
   }
@@ -93,9 +98,11 @@ document.addEventListener("DOMContentLoaded", function (event) {
   let rollDice = document.getElementById("rollButton");
 
   rollDice.addEventListener("click", function (event) {
-    let checkboxDicechoiceArr = document.getElementsByClassName(
-      "classcheckboxdice"
-    );
+    let checkboxoOpacity = document.getElementsByClassName("classcheckboxdice");
+    for (const box of checkboxoOpacity) {
+      box.style.opacity = 1.0;
+    }
+
     //サイコロを振れる残りの回数の計算とその表示。
     //サイコロを振れる残りの回数をHTMLから3を得る。
     let diceThrowsLeft = document.getElementById("rollDiceLeft").innerHTML;
@@ -110,12 +117,16 @@ document.addEventListener("DOMContentLoaded", function (event) {
     //引いた残りの振れる回数を数字をHTMLに表示する。
     document.getElementById("rollDiceLeft").innerHTML = diceThrowsLeftNumber;
 
+    let checkboxDicechoiceArr = document.getElementsByClassName(
+      "classcheckboxdice"
+    );
+
     for (
       let checkboxDicechoice = 0;
       checkboxDicechoice < checkboxDicechoiceArr.length;
       checkboxDicechoice++
     ) {
-      if (checkboxDicechoiceArr[checkboxDicechoice].checked) {
+      if (checkboxDicechoiceArr[checkboxDicechoice].checked == false) {
         let diceCheckboxDicechoice = Math.floor(Math.random() * 6 + 1);
         let imgDiceRollChoice = document.getElementById(
           "dice" + (checkboxDicechoice + 1)
