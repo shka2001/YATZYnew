@@ -141,6 +141,29 @@ document.addEventListener("DOMContentLoaded", function (event) {
     // }
   });
 
+  let resetButton = document.getElementById("resetButton");
+  resetButton.addEventListener("click", function (event) {
+    document.getElementById("rollDiceLeft").innerHTML = 3;
+    let imgDicesArr = document.getElementsByClassName("dices");
+    let checkboxDicechoiceArr = document.getElementsByClassName(
+      "classcheckboxdice"
+    );
+
+    for (
+      let checkboxDicechoice = 0;
+      checkboxDicechoice < checkboxDicechoiceArr.length;
+      checkboxDicechoice++
+    ) {
+      checkboxDicechoiceArr[checkboxDicechoice].checked = false;
+      let diceCheckboxDicechoice = 1;
+      let imgDiceRollChoice = document.getElementById(
+        "dice" + (checkboxDicechoice + 1)
+      );
+      imgDiceRollChoice.src = "img/dice" + diceCheckboxDicechoice + ".png";
+      imgDiceRollChoice.style.opacity = 0.3;
+    }
+  });
+
   //ul内に入力された情報のリスト内からクリックで削除する。
   let list = document.getElementById("ul_list");
   list.addEventListener("click", function (event) {
