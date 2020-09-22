@@ -144,7 +144,6 @@ document.addEventListener("DOMContentLoaded", function (event) {
   let resetButton = document.getElementById("resetButton");
   resetButton.addEventListener("click", function (event) {
     document.getElementById("rollDiceLeft").innerHTML = 3;
-    let imgDicesArr = document.getElementsByClassName("dices");
     let checkboxDicechoiceArr = document.getElementsByClassName(
       "classcheckboxdice"
     );
