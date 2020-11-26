@@ -39,6 +39,10 @@ input {
   max-width: 40px;
 }
 
+.diceboxinner {
+  opacity: 0.3;
+}
+
 td img {
   width: 50px;
   height: auto;
