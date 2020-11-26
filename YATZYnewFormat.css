@@ -19,6 +19,9 @@ td:nth-child(even) {
   background-color: grey;
 }
 
+p {
+  text-align: center;
+}
 th {
   background-color: rgb(167, 165, 165);
 }
@@ -42,6 +45,7 @@ td img {
 
 table.diceBox {
   border: none;
+  margin: auto;
 }
 td.diceboxinner {
   border: none;
